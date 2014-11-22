@@ -9,20 +9,20 @@ class Arzamath17thPostType {
 
     public function Arzamath17thPostTypeInit() {
         $labels = array(
-            'name'               => 'Arzamath17thPosts',
-            'singular_name'      => 'Arzamath17thPost',
-            'menu_name'          => 'Arzamath17thPosts',
-            'name_admin_bar'     => 'Arzamath17thPost',
+            'name'               => 'Arzamath 17th Posts',
+            'singular_name'      => 'Arzamath 17th Post',
+            'menu_name'          => 'Arzamath 17th Posts',
+            'name_admin_bar'     => 'Arzamath 17th Post',
             'add_new'            => 'Add New',
-            'add_new_item'       => 'Add New Arzamath17thPost',
-            'new_item'           => 'New Arzamath17thPost',
-            'edit_item'          => 'Edit Arzamath17thPost',
-            'view_item'          => 'View Arzamath17thPost',
-            'all_items'          => 'All Arzamath17thPosts',
-            'search_items'       => 'Search Arzamath17thPosts',
-            'parent_item_colon'  => 'Parent Arzamath17thPosts:',
-            'not_found'          => 'No Arzamath17thPosts found.',
-            'not_found_in_trash' => 'No Arzamath17thPosts found in Trash.',
+            'add_new_item'       => 'Add New Arzamath 17th Post',
+            'new_item'           => 'New Arzamath 17th Post',
+            'edit_item'          => 'Edit Arzamath 17th Post',
+            'view_item'          => 'View Arzamath 17th Post',
+            'all_items'          => 'All Arzamath 17th Posts',
+            'search_items'       => 'Search Arzamath 17th Posts',
+            'parent_item_colon'  => 'Parent Arzamath 17th Posts:',
+            'not_found'          => 'No Arzamath 17th Posts found.',
+            'not_found_in_trash' => 'No Arzamath 17th Posts found in Trash.',
         );
 
         $args = array(
@@ -37,10 +37,10 @@ class Arzamath17thPostType {
             'has_archive'        => true,
             'hierarchical'       => false,
             'menu_position'      => null,
-            'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+            'supports'           => array('editor', 'thumbnail')
         );
 
-        register_post_type( 'Arzamath17thPosts', $args );
+        register_post_type( 'arzamath_17th_post', $args );
     }
 }
 
