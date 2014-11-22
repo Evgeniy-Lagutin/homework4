@@ -7,7 +7,7 @@ class Arzamath_17th_Settings
      */
     public function __construct()
     {
-        add_action('admin_menu', array(&$this, 'createSettings'));
+        add_action('admin_menu', array($this, 'createSettings'));
     }
 
     public function createSettings()
@@ -24,7 +24,7 @@ class Arzamath_17th_Settings
             'Arzamath 17th',
             'administrator',
             'arzamath_17th',
-            array(&$this, 'getTemplate'),
+            array($this, 'getTemplate'),
             '',
             1
         );
@@ -34,7 +34,7 @@ class Arzamath_17th_Settings
             'Arzamath 17th',
             'manage_options',
             'arzamath_17th',
-            array(&$this, 'getTemplate')
+            array($this, 'getTemplate')
         );
     }
 
