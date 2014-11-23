@@ -70,7 +70,7 @@ class Arzamath17thPostType {
     }
 
     public function saveMetaBox($postId) {
-            update_post_meta($postId, 'arzamath_17th_post_meta_box', $_POST['arzamath_17th_post_meta_box']);
+            update_post_meta($postId, 'arzamath_17th_post_meta_box', serialize($_POST['arzamath_17th_post_meta_box']));
     }
 }
 
