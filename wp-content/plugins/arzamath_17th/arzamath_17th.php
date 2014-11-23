@@ -25,8 +25,8 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 
-register_activation_hook(__FILE__, array('arzamath_17th', 'plugin_activation'));
-register_deactivation_hook(__FILE__, array('arzamath_17th', 'plugin_deactivation'));
+//register_activation_hook(__FILE__, array('arzamath_17th', 'plugin_activation'));
+//register_deactivation_hook(__FILE__, array('arzamath_17th', 'plugin_deactivation'));
 
 require_once(dirname(__FILE__). '/arzamath_17.class.php');
 
