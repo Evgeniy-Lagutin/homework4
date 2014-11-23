@@ -5,6 +5,7 @@ class Arzamath17thPostType {
     public function __construct()
     {
         add_action( 'init', array($this, 'Arzamath17thPostTypeInit'));
+        $this->processMetaBoxes();
     }
 
     public function Arzamath17thPostTypeInit() {
@@ -41,6 +42,35 @@ class Arzamath17thPostType {
         );
 
         register_post_type( 'arzamath_17th_post', $args );
+    }
+
+    public function processMetaBoxes()
+    {
+        if (is_admin()) {
+            add_action('add_meta_boxes', array($this, 'addMetaBox'));
+        }
+        add_action('save_post', array($this, 'saveMetaBox'));
+    }
+
+    public function addMetaBox()
+    {
+        add_meta_box(
+            'arzamath_17th_post_meta_box',
+            'Custom Multiselect',
+            array($this, 'getMetaBoxTemplate'),
+            'arzamath_17th_post',
+            'advanced',
+            'high'
+        );
+    }
+
+    public function getMetaBoxTemplate()
+    {
+        include(dirname(__FILE__) . '/../templates/arzamath_17th_post_meta_box.php');
+    }
+
+    public function saveMetaBox($postId) {
+            update_post_meta($postId, 'arzamath_17th_post_meta_box', $_POST['arzamath_17th_post_meta_box']);
     }
 }
 
