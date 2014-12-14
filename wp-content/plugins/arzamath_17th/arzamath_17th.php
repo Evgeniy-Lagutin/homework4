@@ -29,5 +29,5 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //register_deactivation_hook(__FILE__, array('arzamath_17th', 'plugin_deactivation'));
 
 require_once(dirname(__FILE__). '/arzamath_17.class.php');
+new Arzamath_17th();
 
-$arzamath_17th = new Arzamath_17th();

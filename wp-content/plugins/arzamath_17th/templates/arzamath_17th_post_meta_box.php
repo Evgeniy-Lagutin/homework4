@@ -19,3 +19,40 @@
     }
     ?>
 </select>
+<button class="just-button">Save changes</button>
+
+<?php
+
+function my_action_javascript()
+{
+    $script = <<<HTML
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $(".just-button").click(function(e) {
+            e.preventDefault();
+            var data = {
+                action: "my_action",
+                articleText: $(".wp-editor-area").val()
+            };
+            $.ajax({
+                type: "POST",
+                url: ajaxurl,
+                data: data,
+                success: function(response) {
+                debugger;
+                $("#message").append(response);
+            },
+                error: function(response) {
+                debugger;
+                $("#message").append(response);
+            },
+                dataType: "json"
+            });
+        });
+    });
+</script>
+HTML;
+
+    echo $script;
+}
+
